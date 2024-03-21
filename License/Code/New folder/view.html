@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM</title>
+
+    <!--Bootstrap 5 CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/Bootstrap5/css/bootstrap.css">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!--Bootstrap Dropdown Js--->
+    <script type="text/javascript" src="../../assets/Bootstrap5/js/popper.min.js"></script>
+
+
+    <!--datatables CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/buttons.dataTables.min.css">
+
+
+    <!--Bootstrap 5 JS--->
+    <script type="text/javascript" src="../../assets/Bootstrap5/js/bootstrap.js"></script>
+
+    <!--Datatables js-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../../datatable/datatable.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.responsive.min.js"></script>
+
+    <!--Datatable dropdown----->
+    <script type="text/javascript" src="../../assets/js/datatables.pdfmake.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.vfs_fonts.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.jszip.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.print.min.js"></script>
+
+    <!--Dropdown select-->
+    <link rel="stylesheet" href="../../assets/Bootstrap5/css/bootstrap-select.min.css">
+    <script src="../../assets/Bootstrap5/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/sales.css">
+    <link rel="stylesheet" href="../../assets/css/salesagent.css">
+    <link rel="stylesheet" href="../../assets/css/tabcarousel.css">
+
+    <style>
+        .vendor {
+            padding-bottom: 10px !important;
+        }
+
+        .help-block {
+            margin-left: 10px;
+            color: red;
+        }
+
+        .notes {
+            background-color: #fcf8e3;
+            width: 100%;
+            padding: 10px 15px;
+            border-color: #faebcc;
+
+        }
+
+        .linehr {
+            margin: -1px !important;
+        }
+
+        @media only screen and (max-width: 770px) {
+            .linehr {
+                margin: 4px !important;
+                padding: -2px;
+            }
+            .back{
+                width: fit-content;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+            }
+           
+        }
+    </style>
+
+</head>
+
+<body style="margin-bottom:100px">
+    <form action="" id="addlead10">
+        <div class="tblcontainer1 container-fluid ">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clearfix">
+                        <h4 class="heading pull-left" style="font-size: 18px;">
+                            Acrobat </h4>
+                        <button type="button" class="back" style="position: absolute; top: 10px; right: 25px; font-size: 14px; margin-right: 20px;"
+                            onclick="window.location.href = 'licenses.html';">BACK</button>
+
+                    </div>
+
+                </div>
+            </div>
+            <br>
+                <hr class="fileline linehr">
+
+                <div class="row vendcarmt">
+                    <div class="col-md-12 ">
+                        <div class="desktop" style="font-size: 14px;">
+                            <div class="scroll-images custml toptea">
+                                <div class="child mb-0 ">
+                                    <button class="tablinks tb-links active" type="button"
+                                        onclick="openTab(event, 'general')">Details</button>
+                                </div>
+                                <div class="child mb-0">
+                                    <button class="tablinks tb-links" type="button"
+                                        onclick="openTab(event, 'billing')">Seats</button>
+                                </div>
+                                <div class="child mb-0">
+                                    <button class="tablinks tb-links" type="button"
+                                        onclick="openTab(event, 'custom')">History</button>
+                                </div>
+                                <div class="child mb-0">
+                                    <button class="tablinks tb-links" type="button"
+                                        onclick="openTab(event, 'file')">Files</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false"
+                            style="height: 50px;">
+                            <div class="carousel-inner scroll-images">
+
+                                <div class="carousel-item active" style="text-align: center;">
+                                    <div class="">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks active tabresact" style="width:70%" type="button"
+                                                onclick="openTab(event, 'general')">Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%" type="button"
+                                                onclick="openTab(event, 'billing')">Seats</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%" type="button"
+                                                onclick="openTab(event, 'custom')">History</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%" type="button"
+                                                onclick="openTab(event, 'file')">Files</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button id="prevButton" class="carousel-control-prev" style="margin-top: 10px;"
+                                    type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <i class="bi bi-chevron-left icon" style="color:black;font-weight: bold;"></i>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+
+                                <button id="nextButton" class="carousel-control-next" style="margin-top: 10px;"
+                                    type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <i class="bi bi-chevron-right icon" style="color:black;font-weight:bold"></i>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="fileline vendcarline linehr">
+
+
+
+
+                <div id="general" class="tabcontent  mtgb" style="display:block;">
+                    <div class="" style="margin-left: 0%; margin-top: -2%;"><br><br>
+                        <table class="table table-striped" style="font-size: 14px;">
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <dl>
+                                            <dt>Manufacture: HP</dt>
+                                            <dd><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+                                                </svg><a class="link-opacity-10" href="#"> https://hp.com</a></dd>
+                                            <dd><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-stop-circle-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.5 5A1.5 1.5 0 0 0 5 6.5v3A1.5 1.5 0 0 0 6.5 11h3A1.5 1.5 0 0 0 11 9.5v-3A1.5 1.5 0 0 0 9.5 5h-3z" />
+                                                </svg><a class="link-opacity-10" href="#"> https://support.hp.com</a></dd>
+                                            <dd><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                                </svg><a class="link-opacity-10" href="#">lamtructth@gmail.com</a></dd>
+                                            <dd><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                                </svg><a class="link-opacity-10" href="#">1-876-757-2073 883</a></dd>
+                                        </dl>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Product key:</b> 700125eb-1fa0-3457-8d38-aa0919285555</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Category:</b> Graphics Software</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Supplier:</b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Licensed to name:</b> Glenda Pagac</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Licensed to email:</b> alena88@example.net</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Expiration date:</b> 2022-04-20</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Termination date:</b> 2022-04-19</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Purchase order number:</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Purchase date:</b> 2022-04-19
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Purchase cost:</b> 22.99
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Order number:</b> 9088974
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Seats:</b> 12
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Reassignable:</b> No
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Notes:</b>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <div id="billing" class="tabcontent  mtgb">
+                    <div class="demo-html mt-0">
+                        <table class="example display dataTable display responsive nowrap tblalign table borderless"
+                            style="width: 100%; font-size: 14px;" aria-describedby="example_info">
+                            <thead class="theadrow">
+                                <tr>
+                                    <th class="select-checkbox sorting_disabled">
+                                        Seat
+                                    </th>
+                                    <th class="select-checkbox sorting_disabled">
+                                        User
+                                    </th>
+                                    <th class="sorting sorting_asc">
+                                        Assest
+                                    </th>
+                                    <th class="sorting">
+                                        Location
+                                    </th>
+                                    <th class="sorting">
+                                        Check-in/Check-out
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Seat 1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')">
+                                            CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 2</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')">
+                                            CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 3</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 4</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 5</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 6</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 7</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 8</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 9</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 10</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 11</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 12</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Seat 13</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="clrlogbtn" style="margin-top: -10px;"
+                                            onclick="showModal('check-out.html','Check-Out')"> CHECK-OUT</button></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="custom" class="tabcontent  ">
+                    <div class="demo-html mt-0">
+                        <table class="example display dataTable display responsive nowrap tblalign table borderless"
+                            style="width: 100%" aria-describedby="example_info">
+                            <thead class="theadrow">
+                                <tr>
+                                    <th class="select-checkbox sorting_disabled">
+                                        Date
+                                    </th>
+                                    <th class="select-checkbox sorting_disabled">
+                                        Admin
+                                    </th>
+                                    <th class="sorting sorting_asc">
+                                        Action
+                                    </th>
+                                    <th class="sorting">
+                                        Target
+                                    </th>
+                                    <th class="sorting">
+                                        Notes
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div id="file" class="tabcontent  ">
+                    <button type="button" class="hrbtns contractbtn " onclick="showModal('upload.html',' Upload File')"
+                        style="height: fit-content; font-size: 14px;">UPLOAD FILE</button>
+                </div>
+
+            </div>
+        </form>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal_md" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+                        <h5 class="modal-title"></h5>
+                    </div>
+                    <div class="modal-body ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var table = $('.example').DataTable({
+                    language: { lengthMenu: '_MENU_' },
+                    rowReorder: {
+                        selector: 'td:nth-child(2)'
+                    },
+                    responsive: true,
+                    dom: 'Blfrtip',
+                    buttons: [
+                        {
+                            text: 'EXPORT',
+                            extend: 'collection',
+                            buttons: ['excel', 'csv', 'pdf', 'print'],
+                            className: 'px-3'
+                        },
+                        {
+                            text: '<i class="bi bi-arrow-repeat p-1" style="font-size:12px"></i>'
+                        }
+                    ]
+                });
+            });
+        </script>
+
+        <!-- Modal script -->
+
+        <script>
+            function showModal(url, title) {
+
+                $('#modal_md').on('shown.bs.modal', function () {
+                    $('.selectpicker').selectpicker('refresh');
+                });
+                $('#modal_md').modal('show', { backdrop: 'true' });
+                $.ajax({
+                    url: url,
+                    success: function (response) {
+                        $('#modal_md .modal-title').html(title);
+                        $('#modal_md .modal-body').html(response);
+                    }
+                });
+            }
+        </script>
+        <script>
+            $('#addlead10').formValidation({
+                framework: 'bootstrap',
+                fields: {
+
+
+                    Name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'This field is required'
+                            }
+                        }
+                    },
+                    demo_test_event: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Select demo test event'
+                            }
+                        }
+                    },
+                }
+            })
+
+        </script>
+
+        <script>
+            const dropdowns = document.querySelectorAll('.multiselect');
+
+            dropdowns.forEach(dropdown => {
+                const inputBox = document.createElement('input');
+                inputBox.type = 'hidden';
+                inputBox.classList.add('selected-values');
+                name = dropdown.getAttribute('data-name');
+                inputBox.setAttribute("name", name);
+                dropdown.after(inputBox);
+
+                dropdown.addEventListener('change', () => {
+                    const selectedOptions = Array.from(dropdown.selectedOptions).map(option => option.value);
+                    inputBox.value = selectedOptions.join(', ');
+                });
+            });
+        </script>
+        <script>
+
+
+            $(document).ready(function () {
+
+                var options = {
+                    html: true,
+                    title: "Optional: HELLO(Will overide the default-the inline title)",
+                    //html element
+                    //content: $("#popover-content")
+                    content: $('[data-name="popover-content"]')
+                    //Doing below won't work. Shows title only
+                    //content: $("#popover-content").html()
+
+                }
+                var exampleEl = document.getElementById('example10')
+                var popover = new bootstrap.Popover(exampleEl, options)
+            })
+
+        </script>
+
+        <script>
+            function openTab(evt, tabName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            var carousel = document.getElementById("carouselExampleIndicators");
+
+            carousel.addEventListener("slid.bs.carousel", function (event) {
+                var activeSlideIndex = event.to;
+                if (activeSlideIndex === 0) {
+
+                    openTab(event, 'general');
+
+                }
+                else if (activeSlideIndex === 1) {
+
+                    openTab(event, 'billing');
+
+                }
+                else if (activeSlideIndex === 2) {
+
+                    openTab(event, 'custom');
+
+                }
+                else if (activeSlideIndex === 3) {
+
+                    openTab(event, 'file');
+
+                }
+
+            });
+
+
+
+        </script>
+    </body>
+
+    </html>

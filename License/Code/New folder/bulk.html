@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/Bootstrap5/css/bootstrap.css" />
+
+    <!--Bootstrap 5 JS--->
+    <script type="text/javascript" src="../../assets/Bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/de952d599f.js" crossorigin="anonymous"></script>
+
+    <!--datatables CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/buttons.dataTables.min.css" />
+
+    <!--Datatables js-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="./datatable/datatable.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.responsive.min.js"></script>
+
+    <!--Datatable dropdown----->
+    <script type="text/javascript" src="../../assets/js/datatables.pdfmake.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.vfs_fonts.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.jszip.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.print.min.js"></script>
+
+    <!--Dropdown select-->
+    <link rel="stylesheet" href="../../assets/Bootstrap5/css/bootstrap-select.min.css" />
+    <script src="../../assets/Bootstrap5/js/bootstrap-select.min.js"></script>
+
+    <!--summernote_textarea-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <!-- CSS -->
+    <!-- validation -->
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <style>
+        .help-block {
+            margin-left: 10px;
+            color: red;
+        }
+
+        .notes {
+            background-color: #fcf8e3;
+            width: 98%;
+            padding: 10px 15px;
+            border-color: #faebcc;
+            margin-left: 10px;
+            margin-right: -20px;
+            margin-top: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+        
+            
+            .notes{
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body style="padding: 20px;">
+    <form action="" id="addlead2" style="margin: auto;">
+        <div class="row">
+            <div class="col-md-4 qarow1">
+                <a href="https://perfexmodules.gtssolution.site/modules/fixed_equipment/uploads/file_sample/sample_import_license_en.xlsx"
+                    class="hrbtns record-button contractbtn" style="padding: 6px 12px; font-size: 14px;">DOWNLOAD A
+                    SAMPLE</a>
+            </div>
+        </div>
+        <hr class="fileline">
+        <div class="font-weight-bold">
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="overflow-x: auto;">
+                        <table class="table table-bordered" style="width: 100%" aria-describedby="example_info">
+                            <thead>
+                                    <td><span class=" aster">* </span>Software Name</td>
+                                    <td>Product key</td>
+                                    <td><span class=" aster">* </span>Seats</td>
+                                    <td>Licensed to name</td>
+                                    <td>Licensed to email</td>
+                                    <td>Reassignable</td>
+                                    <td>Maintained</td>
+                                    <td>Order number</td>
+                                    <td>Purchase order number</td>
+                                    <td>Purchase cost</td>
+                                    <td>Purchase date<br>(mm/dd/YYYY)</td>
+                                    <td>Expiration date</td>
+                                    <td>Termination date</td>
+                                    <td>Purchase date</td>
+                                    <td><span class=" aster">* </span>Category ID</td>
+                                    <td><span class=" aster">* </span>Manufacturer ID</td>
+                                    <td>Supplier ID</td>
+                                    <td>Depreciation ID</td>
+                                    <td>Notes</td>
+                            
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+
+
+                <div class="notes">
+                    <h4>Notes</h4>
+                    <p> 1. Fields marked with * are required to enter.<br>
+                        2. In field "Reassignable, Maintained" you are only allowed to enter a value of 0 or 1 (Not
+                        allow: 0; Allow: 1).<br>
+                        3. For columns like "Category ID, Manufacturer ID, Supplier ID, Depreciation ID" please look up
+                        the ID in the settings and fill it in (Note in the Category ID field you should only get the ID
+                        of the category type is license).
+
+                    </p>
+                    <hr class="fileline">
+                    <p>Format the excel file to "text" before uploading.</p>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr class="fileline">
+        <div class="col-md-4">
+            <div class=" excfnthr">
+                <label for="" class="excfllbl" style="line-height: 3;"><span class=" aster">*</span>Choose excel
+                    file</label>
+                <br>
+                <div class="input-group d-flex flex-nowrap">
+                    <input type="file" class="chooseexcfle" name="PayAcc">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 qarow">
+            <button type="submit" class="hrbtns record-button contractbtn" style="padding: 6px 12px; font-size: 14px;">
+                IMPORT
+            </button>
+        </div>
+    </form>
+
+
+    <script>
+        $('#addlead2').formValidation({
+            framework: 'bootstrap',
+            fields: {
+
+
+                PayAcc: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        }
+                    }
+                },
+
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

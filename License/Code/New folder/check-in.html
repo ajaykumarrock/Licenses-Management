@@ -1,0 +1,59 @@
+<style>
+    .help-block {
+        margin-left: 10px;
+        color: red;
+    }
+</style>
+
+<form action="" id="addlead2">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrps">
+                 <label class="purchaseinfo" style="line-height: 2;">Software Name</label>
+                 <input type="text" class="form-control purchaseselects">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrps">
+                <label class="emailpro " style="line-height: 2;">Notes</label>
+                <textarea class="textdesc  " rows="4"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 blkftr">
+            <div class="modal-footer taskfooter">
+                <button type="button" class="taskclose1" data-bs-dismiss="modal">
+                    CLOSE
+                </button>
+                <button type="submit" class="tasksave1">CHECK-IN</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script>
+    $('#addlead2').formValidation({
+        framework: 'bootstrap',
+        fields: {
+
+
+            PayAcc: {
+                validators: {
+                    notEmpty: {
+                        message: 'This field is required'
+                    }
+                }
+            },
+
+
+        }
+    })
+
+</script>

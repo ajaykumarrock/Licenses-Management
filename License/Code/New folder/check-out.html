@@ -1,0 +1,83 @@
+<style>
+    .help-block {
+        margin-left: 10px;
+        color: red;
+    }
+</style>
+
+<form action="" id="addlead2">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrps">
+                 <label class="purchaseinfo" style="line-height: 2;">Software Name</label>
+                 <input type="text" class="form-control purchaseselects">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <label>&nbsp;Check-Out to:</label><br>
+                <input class="form-check-label" type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked style="margin-left: 5.5px;">
+                <label class="form-check-label" for="radio1" style="line-height: 3;">Staff</label>
+             
+                <input class="form-check-label" type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+                <label class="form-check-label" for="radio2">Assets</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrps">
+                <label for="tags" class="purchaseinfo mb-1" style="line-height: 2;"><span class=" aster">*</span>Staff</label>
+                <select id="PayAcc" class="selectpicker form-control" data-live-search="true" title="None Selected" name="PayAcc">
+                        <option value="0"></option>
+                        <option value="1">Graphics Software</option>
+                        <option value="2">Office Software</option>
+                        <option value="3">Sales Revenue</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrps">
+                <label class="emailpro" style="line-height: 2;">Notes</label>
+                <textarea class="textdesc  " rows="4"></textarea>
+            </div>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-md-12 blkftr">
+            <div class="modal-footer taskfooter">
+                <button type="button" class="taskclose1" data-bs-dismiss="modal">
+                    CLOSE
+                </button>
+                <button type="submit" class="tasksave1">CHECK-OUT</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script>
+    $('#addlead2').formValidation({
+        framework: 'bootstrap',
+        fields: {
+
+
+            PayAcc: {
+                validators: {
+                    notEmpty: {
+                        message: 'This field is required'
+                    }
+                }
+            },
+
+
+        }
+    })
+
+</script>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <!--Bootstrap 5 CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/Bootstrap5/css/bootstrap.css" />
+
+    <!--Bootstrap 5 JS--->
+    <script type="text/javascript" src="../../assets/Bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/de952d599f.js" crossorigin="anonymous"></script>
+
+    <!--datatables CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/buttons.dataTables.min.css" />
+
+    <!--Datatables js-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="./datatable/datatable.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.responsive.min.js"></script>
+
+    <!--Datatable dropdown----->
+    <script type="text/javascript" src="../../assets/js/datatables.pdfmake.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.vfs_fonts.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.jszip.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.print.min.js"></script>
+
+    <!--Dropdown select-->
+    <link rel="stylesheet" href="../../assets/Bootstrap5/css/bootstrap-select.min.css" />
+    <script src="../../assets/Bootstrap5/js/bootstrap-select.min.js"></script>
+
+    <!--summernote_textarea-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <!-- CSS -->
+    <!-- validation -->
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <style>
+        .help-block {
+            margin-left: 10px;
+            color: red;
+        }
+
+        .dropbtn {
+            color: black;
+        }
+
+        .dropdown {
+            display: -moz-inline-box;
+        }
+
+        .dropdown-content {
+            display: none;
+            font-size: smaller;
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: inline-flex;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: flex;
+        }
+        .purchase1{
+            font-size: 18px;
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid tblcontainer1">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="cate" style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 18px;">
+                    Licenses Management</h4>
+            </div>
+        </div>
+        <hr class="fileline">
+       
+            <div class="row" style="margin-top: 10px;">
+                
+                <div class="col-md-1">
+                    <div class="purchase1">
+                    <button type="submit" class="hrbtns contractbtn " 
+                        onclick="showModal('modal ref.html','&nbspAdd License')"
+                        style="height: fit-content; font-size: 14px; padding: 4px 15px;">ADD</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href="bulk.html"><button type="button" class=" hrbtns hrrecbtn hrimport"
+                        style="height: fit-content; font-size: 14px; margin-left: -50px;">BULK UPLOAD</button></a>
+                </div>
+                
+                    <div class="col-md-3" style="margin-left: auto;">
+                        <div class="purchasegrps">
+                            <label for="tags" class="purchaseinfo mb-1" style="line-height: 2;"><span class="aster"></span>Manufacturer</label>
+                            <select class="selectpicker form-control" name="currency">
+                                <option value=""></option>
+                                <option value="3">HP</option>
+                                <option value="14">Toyota</option>
+                                <option value="15">NxtM</option>
+                                <option value="16">BlackMagic</option>
+                                <option value="17">DJI</option>
+                                <option value="18">Bally</option>
+                                <option value="19">Proxmox</option>
+                                <option value="20">VMWARE</option>
+                                <option value="21">HP</option>
+                                <option value="22">Bosch</option>
+                                <option value="23">Rojo redmon</option>
+                                <option value="24">DRD</option>
+                                <option value="25">Dean</option>
+                                <option value="26">Interno</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+        
+        <div class="demo-html mt-0">
+            <table class="example display dataTable display responsive nowrap tblalign" style="width: 100%"
+                aria-describedby="example_info">
+                <thead class="theadrow">
+                    <tr>
+                        <th class="sorting">
+                            ID
+                        </th>
+                        <th class="sorting">
+                            License
+                        </th>
+                        <th class="sorting">
+                            Product Key
+                        </th>
+                        <th class="sorting">
+                            Expiration Date
+                        </th>
+                        <th class="sorting">
+                            Licensed to email
+                        </th>
+                        <th class="sorting">
+                            Licensed to name
+                        </th>
+                        <th class="sorting">
+                            Manufacturer
+                        </th>
+                        <th class="sorting">
+                            Total
+                        </th>
+                        <th class="sorting">
+                            Avail
+                        </th>
+                        <th class="sorting">
+                            Check-in/Check-out
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Acrobat</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        </td>
+
+                        <td>700125eb-1fa0-3457-8d38-aa0919285555</td>
+                        <td>2022-04-20</td>
+                        <td>alena88@example.net</td>
+                        <td>Glenda Pagac</td>
+                        <td>HP</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td><button type="button" class="clrlogbtn " style="margin-top: -10px; font-size: 14px;" onclick="showModal('check-out.html','&nbspCheck-Out')">
+                                CHECK-OUT</button></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Indesign</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+
+                        <td>4a216939-35f7-3616-9869-05e73a670142</td>
+                        <td>2022-07-30</td>
+                        <td></td>
+                        <td>Aileen Rogahn</td>
+                        <td> </td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><button type="submit" class="clrlogbtn" style="margin-top: -10px; font-size: 14px;" onclick="showModal('check-out.html','&nbspCheck-Out')">
+                                CHECK-OUT</button></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Office</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td>0e938afa-5f16-3698-9460-30dae608770a</td>
+                        <td>2022-08-31</td>
+                        <td>crist.dianna@example.net</td>
+                        <td>Reyes Leuschke</td>
+                        <td> </td>
+                        <td>15</td>
+                        <td>9</td>
+                        <td><button type="submit" class="clrlogbtn" style="margin-top: -10px; font-size: 14px;" onclick="showModal('check-out.html','&nbspCheck-Out')">
+                                CHECK-OUT</button></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Photoshop</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td>85cfe8a2-d481-3e0c-8384-d2952cbed6bb</td>
+                        <td>2022-07-31</td>
+                        <td>ari@example.net</td>
+                        <td>Miguel Kunde</td>
+                        <td> </td>
+                        <td>8</td>
+                        <td>1</td>
+                        <td><button type="submit" class="clrlogbtn" style="margin-top: -10px; font-size: 14px;" onclick="showModal('check-out.html','&nbspCheck-Out')">
+                                CHECK-OUT</button></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Mail 50Go</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td> </td>
+                        <td>2022-07-22</td>
+                        <td> </td>
+                        <td>Kunde Miguel</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td><button type="submit" class="hrbtns contractbtn " style=" width: fit-content; margin-top: -10px; font-size: 14px;" 
+                                onclick="showModal('check-in.html','&nbspMail 50Go')">CHECK-IN</button></td>
+                    </tr>
+                    <tr>
+                        <td>129</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Windows 10 Pro</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td> </td>
+                        <td>2022-04-20</td>
+                        <td>eu@example.net</td>
+                        <td>Glenda Pagac</td>
+                        <td>HP</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td><button type="submit" class="hrbtns contractbtn " style=" width: fit-content; margin-top: -10px; font-size: 14px;" 
+                                onclick="showModal('check-in.html','&nbspWindows 10 pro')">CHECK-IN</button></td>
+                    </tr>
+                    <tr>
+                        <td>231</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">ScanImg</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td>700125eb-1fa0-3457-8d38-aa0919285555</td>
+                        <td></td>
+                        <td>alena88@example.net</td>
+                        <td></td>
+                        <td></td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td><button type="submit" class="clrlogbtn" style="margin-top: -10px; font-size: 14px;" onclick="showModal('check-out.html','&nbspCheck-Out')">
+                                CHECK-OUT</button></td>
+                    </tr>
+                    <tr>
+                        <td>98</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Microsoft</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td></td>
+                        <td>2022-04-20</td>
+                        <td></td>
+                        <td>Glenda Pagac</td>
+                        <td>HP</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td><button type="submit" class="clrlogbtn" style="margin-top: -10px; font-size: 14px;" onclick="showModal('check-out.html','&nbspCheck-Out')">
+                                CHECK-OUT</button></td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Adobe premiere sreenvs</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td>700125eb-1fa0-3457-8d38-aa0919285555</td>
+                        <td></td>
+                        <td>alena88@example.net</td>
+                        <td></td>
+                        <td></td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td><button type="submit" class="hrbtns contractbtn " style="width: fit-content; margin-top: -10px; font-size: 14px;"  
+                                onclick="showModal('check-in.html','&nbspAdobe premiere sreenvs')">CHECK-IN</button></td>
+                    </tr>
+                    <tr>
+                        <td>90</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Edge pro</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td></td>
+                        <td>2022-04-20</td>
+                        <td>alena88@example.net</td>
+                        <td>Glenda Pagac</td>
+                        <td>HP</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td><button type="submit" class="clrlogbtn"  style="margin-top: -10px; font-size: 14px;" onclick="showModal('check-out.html','&nbspCheck-Out')">
+                                CHECK-OUT</button></td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td class="dropdown">
+                            <span class="dropbtn">Mozilla firefox</span>
+                            <br>
+                            <p class="header-effect">
+                                <a href="view.html">
+                                    <span class="" style="font-size: 12px;">View</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <a onclick="showModal('Edit.html','&nbspEdit License')" class="text-danger" style="height: fit-content;">
+                                    <span class="sp-class3" style="font-size: 12px;">Edit</span>
+                                </a>
+                                <span class="black"> |</span>
+                                <span class="sp-class3"  style="font-size: 12px;" onclick="myFunction()">Delete</span>
+                            </p>
+                        </td>
+                        <td>700125eb-1fa0-3457-8d38-aa0919285555</td>
+                        <td></td>
+                        <td>alena88@example.net</td>
+                        <td>Glenda Pagac</td>
+                        <td>HP</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td><button type="submit" class="clrlogbtn" style="margin-top: -10px; font-size: 14px;" 
+                                onclick="showModal('check-out.html','&nbspCheck-Out')">CHECK-OUT</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <!-- Modal script -->
+    <script>
+        $(document).ready(function () {
+            var table = $('.example').DataTable({
+                language: { lengthMenu: '_MENU_' },
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true,
+                dom: 'Blfrtip',
+                buttons: [
+                    {
+                        text: 'EXPORT',
+                        extend: 'collection',
+                        buttons: ['excel', 'csv', 'pdf', 'print'],
+                        className: 'px-3'
+                    },
+                    {
+                        text: '<i class="bi bi-arrow-repeat p-1" style="font-size:12px"></i>'
+                    }
+                ]
+
+            });
+        });
+    </script>
+
+    <div class="modal fade" id="modal_md" role="dialog">
+        <div class="modal-dialog modal-sg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- modal -->
+    <script>
+        function showModal(url, title) {
+            $('#modal_md').on('shown.bs.modal', function () {
+                $('.selectpicker').selectpicker('refresh');
+            });
+            $('#modal_md').modal('show', { backdrop: 'true' });
+            $.ajax({
+                url: url,
+                success: function (response) {
+                    $('#modal_md .modal-title').html(title);
+                    $('#modal_md .modal-body').html(response);
+                }
+            });
+        }
+    </script>
+    </script>
+    <script>
+        function myFunction() {
+            var txt;
+            if (confirm("Are you sure to delete this item?")) {
+                txt = "You pressed Delete!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>
